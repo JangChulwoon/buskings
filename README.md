@@ -11,6 +11,8 @@ busking's web service
  
  - Create Table
  
+ #buskerpool
+
 ~~~~
 CREATE TABLE `buskerpool` (
   `pool_key` int(11) NOT NULL AUTO_INCREMENT,  
@@ -22,7 +24,8 @@ CREATE TABLE `buskerpool` (
   CONSTRAINT `fk_buskerpool_customer1` FOREIGN KEY (`customer_cus_key`) REFERENCES `customer` (`cus_key`) ON DELETE NO ACTION ON UPDATE NO ACTION  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ~~~~
-  pool_key  가 기본키로 설정되어있다.
+  pool_key  : 기본키.  자동적으로 순차 등록되게 설정하였다.
+
 ~~~~
 CREATE TABLE `busking` (
   `busking_key` int(11) NOT NULL AUTO_INCREMENT,
@@ -79,6 +82,8 @@ CREATE TABLE `contents_reple` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ~~~~
 
+ #customer
+
 ~~~~
 CREATE TABLE `customer` (
   `cus_key` int(11) NOT NULL AUTO_INCREMENT,
@@ -90,6 +95,12 @@ CREATE TABLE `customer` (
   PRIMARY KEY (`cus_key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 ~~~~
+	cus_key : 기본키  AUTO_INCREMENT 설정.  
+	id : 회원의 id 를 저장.  
+	pass : 회원의 password를 저장  
+	name : 회원의 이름  
+	category : 공연자의 category를 저장 할 수 있다. (랩 , 클래식 , ...)  
+	join_date : 회원의 가입 날짜.  
 
 ~~~~
 CREATE TABLE `customer_has_customer` (
