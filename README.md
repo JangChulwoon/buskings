@@ -82,8 +82,9 @@ CREATE TABLE `contents_reple` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ~~~~
 
- #customer
-  -회원 정보를 담고있는 테이블
+ # customer  
+ 
+  - 회원 정보를 담고있는 테이블
 
 ~~~~
 CREATE TABLE `customer` (
@@ -104,8 +105,9 @@ cus_key : 기본키  AUTO_INCREMENT 설정. int(11)
 	category : 공연자의 category를 저장 할 수 있다. (랩 , 클래식 , ...) varchar(45)  
 	join_date : 회원의 가입 날짜. date  
 
- #customer_has_customer
-  -회원간의 관계를 저장하고있는 테이블.
+ # Customer_has_customer  
+
+- 회원간의 관계를 저장하고있는 테이블.
 
 ~~~~
 CREATE TABLE `customer_has_customer` (
