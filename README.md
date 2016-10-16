@@ -3,9 +3,13 @@ busking's web service
 
 #DataBase  
 
+- DataBase schema
+
 ~~~
   CREATE DATABASE `buskingsroad` /*!40100 DEFAULT CHARACTER SET utf8 */;
 ~~~~
+ 
+ - Create Table
  
 ~~~~
 CREATE TABLE `buskerpool` (
@@ -18,7 +22,7 @@ CREATE TABLE `buskerpool` (
   CONSTRAINT `fk_buskerpool_customer1` FOREIGN KEY (`customer_cus_key`) REFERENCES `customer` (`cus_key`) ON DELETE NO ACTION ON UPDATE NO ACTION  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ~~~~
-
+  pool_key  가 기본키로 설정되어있다.
 ~~~~
 CREATE TABLE `busking` (
   `busking_key` int(11) NOT NULL AUTO_INCREMENT,
