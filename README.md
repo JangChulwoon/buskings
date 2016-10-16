@@ -97,12 +97,12 @@ CREATE TABLE `customer` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 ~~~~
 
-	cus_key : 기본키  AUTO_INCREMENT 설정. int(11)
-	id : 회원의 id 를 저장. varchar(50)
-	pass : 회원의 password를 저장 varchar(100) 해쉬코드를 저장하기에 100으로 설정. 
-	name : 회원의 이름 varchar(45)
-	category : 공연자의 category를 저장 할 수 있다. (랩 , 클래식 , ...) varchar(45)
-	join_date : 회원의 가입 날짜. date
+cus_key : 기본키  AUTO_INCREMENT 설정. int(11)  
+	id : 회원의 id 를 저장. varchar(50)  
+	pass : 회원의 password를 저장 varchar(100) 해쉬코드를 저장하기에 100으로 설정.   
+	name : 회원의 이름 varchar(45)  
+	category : 공연자의 category를 저장 할 수 있다. (랩 , 클래식 , ...) varchar(45)  
+	join_date : 회원의 가입 날짜. date  
 
  #customer_has_customer
   -회원간의 관계를 저장하고있는 테이블.
@@ -120,5 +120,6 @@ CREATE TABLE `customer_has_customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ~~~~
 
-follow_key : 테이블의 기본키
-customer_cus_key , customer_cus_key1 : follow 관계를 맺고잇는 사용자의 key 이 두 속성은 외래키로 customer 테이블에서 가져옴.  
+follow_key : 테이블의 기본키   
+customer_cus_key , customer_cus_key1 : follow 관계를 맺고잇는 사용자의 key    
+이 두 속성은 외래키로 customer 테이블에서 가져옴.    
