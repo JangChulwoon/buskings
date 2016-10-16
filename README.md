@@ -95,9 +95,9 @@ CREATE TABLE `customer` (
   PRIMARY KEY (`cus_key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 ~~~~
-	cus_key : 기본키  AUTO_INCREMENT 설정.  
-	id : 회원의 id 를 저장.  
-	pass : 회원의 password를 저장  
+cus_key : 기본키  AUTO_INCREMENT 설정.  
+id : 회원의 id 를 저장.  
+pass : 회원의 password를 저장  
 	name : 회원의 이름  
 	category : 공연자의 category를 저장 할 수 있다. (랩 , 클래식 , ...)  
 	join_date : 회원의 가입 날짜.  
